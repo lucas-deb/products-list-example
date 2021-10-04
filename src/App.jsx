@@ -1,16 +1,20 @@
 import React from "react";
-import { Container, Row, Alert } from "react-bootstrap";
-import { useSelector } from "react-redux";
-import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Details from "./pages/Home/Details";
 
 function App() {
-  const item = useSelector((state) => state.products.list[0]);
   return (
-    <Container>
-      <Row>
-        <Alert variant="primary">{item.description}</Alert>
-      </Row>
-    </Container>
+    <Router>
+      <Switch>
+        <Route path="/:id/details">
+          <Details />
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
