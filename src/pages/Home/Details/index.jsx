@@ -11,6 +11,7 @@ export default () => {
 
   return (
     <Container>
+      <h2 className="p-3">Product Details</h2>
       <Card>
         <Card.Body>
           <Card.Title>{product.name}</Card.Title>

@@ -7,6 +7,7 @@ export default () => {
   const products = useSelector((state) => state.products.list);
   return (
     <Container>
+      <h2 className="p-3">Products List</h2>
       <Row>
         <Table striped bordered hover>
           <thead>
