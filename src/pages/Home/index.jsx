@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Alert, Table, Button } from "react-bootstrap";
+import { Container, Row, Table, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
@@ -33,7 +33,6 @@ export default () => {
             ))}
           </tbody>
         </Table>
-        <Alert variant="primary">{products[0].description}</Alert>
       </Row>
     </Container>
   );
